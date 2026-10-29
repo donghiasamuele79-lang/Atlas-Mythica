@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#101a25">
+<meta name="description" content="Enciclopedia mitologica dei giochi di carte collezionabili: divinità, eroi, mostri e folklore nei TCG.">
+<title>Atlas Mythica — Enciclopedia Mitologica dei TCG</title>
+<style>
+:root{--night:#101a25;--deep:#172635;--panel:#1b2b3a;--gold:#d7b46a;--gold2:#f0d99a;--ivory:#f1e8d5;--muted:#b9c0c4;--teal:#7eaaa6;--line:rgba(215,180,106,.27)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at 50% -15%,#354657 0,#172635 38%,#0d151e 80%);color:var(--ivory);font-family:Georgia,'Times New Roman',serif;line-height:1.55}
+a{color:var(--gold2)}button,input,select{font:inherit}button{cursor:pointer}
+header{position:relative;overflow:hidden;border-bottom:1px solid var(--line);min-height:440px;display:grid;place-items:center;text-align:center;padding:58px 20px 54px;background:linear-gradient(180deg,rgba(10,17,24,.25),rgba(10,17,24,.9)),radial-gradient(ellipse at 50% 15%,rgba(215,180,106,.2),transparent 50%),linear-gradient(130deg,#1b3040,#0e1823 65%,#263344)}
+header:before,header:after{content:"✧";position:absolute;color:rgba(240,217,154,.25);font-size:clamp(90px,20vw,230px);top:8%;left:4%;pointer-events:none}header:after{content:"☼";left:auto;right:4%;top:12%;font-size:clamp(80px,16vw,180px)}
+.hero{max-width:900px;position:relative;z-index:1}.eyebrow{letter-spacing:.28em;text-transform:uppercase;color:var(--gold2);font:12px Arial,sans-serif}.sigil{font-size:38px;color:var(--gold);margin:12px}.hero h1{font-size:clamp(2.5rem,7vw,5.7rem);line-height:.98;font-weight:normal;letter-spacing:.025em;margin:10px 0 22px;text-shadow:0 4px 30px #000}.hero p{max-width:660px;margin:0 auto 25px;color:#d4d7d5;font-size:1.1rem}.cta{display:inline-block;border:1px solid var(--gold);background:linear-gradient(130deg,rgba(215,180,106,.2),rgba(215,180,106,.04));color:var(--gold2);padding:12px 20px;text-decoration:none;letter-spacing:.08em;text-transform:uppercase;font:12px Arial,sans-serif}
+nav{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;padding:13px 12px;border-bottom:1px solid var(--line);background:rgba(8,14,20,.7);position:sticky;top:0;z-index:5;backdrop-filter:blur(12px)}nav a{text-decoration:none;color:var(--ivory);padding:8px 12px;font:12px Arial,sans-serif;letter-spacing:.08em;text-transform:uppercase}nav a:hover{color:var(--gold2)}
+main{max-width:1180px;margin:auto;padding:32px 18px 80px}.section-head{display:flex;align-items:end;justify-content:space-between;gap:18px;margin:12px 0 22px;border-bottom:1px solid var(--line);padding-bottom:13px}.section-head h2{font-size:clamp(1.8rem,4vw,2.6rem);font-weight:normal;margin:0}.section-head p{margin:0;color:var(--muted);max-width:520px;font-size:.95rem}.ornament{color:var(--gold);font-size:22px}
+.intro-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:18px;margin:22px 0 42px}.panel{background:linear-gradient(145deg,rgba(37,56,71,.88),rgba(20,32,44,.92));border:1px solid var(--line);padding:22px;box-shadow:0 15px 45px rgba(0,0,0,.12)}.panel h3{font-weight:normal;color:var(--gold2);font-size:1.35rem;margin:0 0 8px}.panel p{margin:0;color:#d1d6d6}.statrow{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:18px}.stat{border-top:1px solid var(--line);padding-top:9px}.stat strong{display:block;color:var(--gold2);font-size:1.45rem;font-weight:normal}.stat span{color:var(--muted);font:11px Arial,sans-serif;text-transform:uppercase;letter-spacing:.1em}
+.searchbox{display:grid;grid-template-columns:1.5fr 1fr 1fr auto;gap:9px;margin:18px 0 22px}.searchbox input,.searchbox select{width:100%;min-width:0;background:#0e1923;color:var(--ivory);border:1px solid #53616b;padding:12px;border-radius:0}.searchbox button{background:var(--gold);color:#18232d;border:0;padding:0 18px;font:12px Arial,sans-serif;text-transform:uppercase;letter-spacing:.08em}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.card{border:1px solid var(--line);background:linear-gradient(160deg,rgba(34,51,66,.9),rgba(15,25,35,.98));overflow:hidden;display:flex;flex-direction:column;min-width:0;transition:transform .2s,border-color .2s}.card:hover{transform:translateY(-3px);border-color:rgba(240,217,154,.7)}.card-art{height:240px;display:grid;place-items:center;position:relative;overflow:hidden;background:radial-gradient(circle at 50% 25%,rgba(215,180,106,.3),transparent 50%),linear-gradient(145deg,#243e4c,#101923)}.card-art:before{content:"";position:absolute;inset:8px;border:1px solid rgba(240,217,154,.18);pointer-events:none;z-index:1}.card-art img{height:100%;max-width:100%;width:auto;object-fit:contain;display:block;position:relative;z-index:0}.card-art.has-image{background:#0b1118}.card-art.has-image:before{inset:4px;border-color:rgba(240,217,154,.32)}.glyph{font-size:64px;color:var(--gold2);text-shadow:0 0 35px rgba(215,180,106,.4)}.card-art small{position:absolute;bottom:13px;left:0;right:0;text-align:center;color:#e0cfaa;font:10px Arial,sans-serif;letter-spacing:.2em;text-transform:uppercase}.card-body{padding:17px;display:flex;flex-direction:column;flex:1}.tags{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:9px}.tag{font:10px Arial,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--gold2);border:1px solid rgba(215,180,106,.3);padding:4px 6px}.card h3{font-size:1.35rem;font-weight:normal;margin:0 0 7px}.card p{font-size:.92rem;color:#cbd0d0;margin:0 0 14px}.card .meta{margin-top:auto;color:#aab5ba;font:11px Arial,sans-serif;letter-spacing:.04em}.card-actions{display:flex;gap:8px;margin-top:14px;flex-wrap:wrap}.card-actions button,.card-actions a{border:1px solid var(--line);background:transparent;color:var(--gold2);padding:8px 10px;text-decoration:none;font:11px Arial,sans-serif;text-transform:uppercase;letter-spacing:.04em}.card-actions button:hover,.card-actions a:hover{background:rgba(215,180,106,.12)}
+.myth-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.myth{border:1px solid var(--line);padding:17px;background:rgba(24,39,52,.72);min-height:138px}.myth .symbol{font-size:28px;color:var(--gold);display:block}.myth h3{font-weight:normal;font-size:1.1rem;margin:4px 0}.myth p{font-size:.83rem;color:var(--muted);margin:0}.myth button{margin-top:12px;background:none;border:0;color:var(--gold2);padding:0;text-decoration:underline;text-underline-offset:3px}
+.method{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.method .panel{padding:18px}.method .number{color:var(--gold);font-size:1.8rem}
+.notice{border-left:3px solid var(--gold);background:rgba(215,180,106,.07);padding:14px 17px;color:#d6d8d5;font-size:.9rem;margin-top:20px}
+footer{border-top:1px solid var(--line);text-align:center;padding:32px 20px 45px;color:#9da9ae;font-size:.82rem;background:#0b1219}footer strong{display:block;color:var(--gold2);font-weight:normal;font-size:1.2rem;margin-bottom:7px}
+dialog{max-width:620px;width:calc(100% - 28px);background:#172635;color:var(--ivory);border:1px solid var(--gold);padding:26px;box-shadow:0 25px 100px #000}dialog::backdrop{background:rgba(0,0,0,.75)}dialog h2{font-weight:normal;color:var(--gold2);margin-top:0}dialog .close{float:right;background:transparent;color:var(--gold2);border:1px solid var(--line);padding:6px 10px}
+.empty{grid-column:1/-1;padding:32px;text-align:center;border:1px dashed var(--line);color:var(--muted)}
+@media(max-width:800px){.intro-grid{grid-template-columns:1fr}.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.myth-grid{grid-template-columns:repeat(2,1fr)}.searchbox{grid-template-columns:1fr 1fr}.searchbox input{grid-column:1/-1}.searchbox button{padding:12px}.method{grid-template-columns:1fr}}
+@media(max-width:500px){header{min-height:390px}.grid{grid-template-columns:1fr}.card-art{height:155px}.section-head{display:block}.section-head p{margin-top:8px}.myth-grid{grid-template-columns:1fr 1fr}.myth{padding:12px;min-height:150px}.statrow{gap:7px}.stat strong{font-size:1.2rem}nav a{padding:8px 7px;font-size:10px}}
+</style>
+</head>
+<body>
+<header id="inizio">
+  <div class="hero">
+    <div class="eyebrow">Archivio di miti, leggende e giochi di carte</div>
+    <div class="sigil">✧ ⟡ ✧</div>
+    <h1>Atlas<br>Mythica</h1>
+    <p>Un atlante delle divinità, degli eroi e delle creature leggendarie reinterpretati nei giochi di carte collezionabili di tutto il mondo.</p>
+    <a class="cta" href="#archivio">Entra nell'archivio &nbsp; ↓</a>
+  </div>
+</header>
+<nav aria-label="Navigazione principale">
+  <a href="#archivio">Archivio</a><a href="#mitologie">Mitologie</a><a href="#giochi">Giochi</a><a href="#metodo">Metodo</a>
+</nav>
+<main>
+  <section class="intro-grid">
+    <div class="panel">
+      <h3>Le leggende attraversano i mondi</h3>
+      <p>Da Anubi a Odino, dai kami giapponesi ai draghi del folklore: esplora le connessioni fra tradizioni culturali e TCG. Ogni collegamento è classificato per distinguere le fonti esplicite dalle interpretazioni e dalle somiglianze ancora da verificare.</p>
+      <div class="statrow"><div class="stat"><strong>∞</strong><span>Leggende da esplorare</span></div><div class="stat"><strong>Multi</strong><span>Universi TCG</span></div><div class="stat"><strong>Fonti</strong><span>Al centro del metodo</span></div></div>
+    </div>
+    <div class="panel">
+      <h3>Come leggere le schede</h3>
+      <p><b style="color:#f0d99a">Riferimento esplicito</b>: la carta nomina direttamente la figura o dichiara l'ispirazione. <b style="color:#f0d99a">Ispirazione probabile</b>: esistono indizi, ma non una conferma diretta. <b style="color:#f0d99a">Somiglianza</b>: un confronto interessante, non una prova di derivazione.</p>
+    </div>
+  </section>
+
+  <section id="archivio">
+    <div class="section-head"><div><div class="eyebrow">Catalogo esplorabile</div><h2>Reperti dell'immaginario</h2></div><p>Filtra per parola chiave, tradizione o gioco. Questa prima edizione è un catalogo iniziale, progettato per essere ampliato.</p></div>
+    <div class="searchbox">
+      <input id="q" type="search" placeholder="Cerca una carta, una divinità, una creatura…" aria-label="Cerca nell'archivio">
+      <select id="mythFilter" aria-label="Filtra per mitologia"><option value="">Tutte le mitologie</option></select>
+      <select id="gameFilter" aria-label="Filtra per gioco"><option value="">Tutti i giochi</option></select>
+      <button id="reset">Azzera filtri</button>
+    </div>
+    <div class="grid" id="catalog"></div>
+    <div class="notice">Le immagini delle carte vengono caricate, quando disponibili, dai cataloghi online dei rispettivi giochi. Se una fonte non risponde o non contiene una carta esatta, resta visibile il simbolo decorativo e puoi aprire la fonte esterna. Le immagini e i marchi appartengono ai rispettivi titolari: il caricamento da una fonte esterna non concede diritti di riutilizzo.</div>
+  </section>
+
+  <section id="mitologie" style="margin-top:54px">
+    <div class="section-head"><div><div class="eyebrow">Atlante culturale</div><h2>Esplora per mitologia</h2></div><p>Le tradizioni non sono intercambiabili: ogni scheda dovrà rispettare il contesto storico, culturale e religioso da cui proviene.</p></div>
+    <div class="myth-grid" id="mythGrid"></div>
+  </section>
+
+  <section id="giochi" style="margin-top:54px">
+    <div class="section-head"><div><div class="eyebrow">Universi di carte</div><h2>Esplora per TCG</h2></div><p>Un archivio aperto a giochi famosi, produzioni regionali, titoli di nicchia e giochi fuori produzione, senza promettere una copertura completa fin dal primo giorno.</p></div>
+    <div class="myth-grid" id="gameGrid"></div>
+  </section>
+
+  <section id="metodo" style="margin-top:54px">
+    <div class="section-head"><div><div class="eyebrow">Rigore e trasparenza</div><h2>Il metodo dell'archivio</h2></div><p>Un confronto utile non si limita a trovare una somiglianza: spiega cosa sappiamo, da dove lo sappiamo e cosa resta incerto.</p></div>
+    <div class="method">
+      <div class="panel"><div class="number">I.</div><h3>Verificare la tradizione</h3><p>Consultare fonti storiche, museali, accademiche o istituzionali per ricostruire il significato della figura mitologica.</p></div>
+      <div class="panel"><div class="number">II.</div><h3>Verificare la carta</h3><p>Registrare nome, gioco, set e fonte consultabile. Non attribuire un'ispirazione precisa senza elementi adeguati.</p></div>
+      <div class="panel"><div class="number">III.</div><h3>Separare mito e fantasia</h3><p>Spiegare le differenze tra la tradizione originale e la versione immaginata dal gioco, senza confonderle.</p></div>
+    </div>
+    <div class="notice"><strong>Nota di indipendenza:</strong> Atlas Mythica è un progetto amatoriale indipendente e non è affiliato, sponsorizzato o approvato dagli editori dei giochi citati. I marchi, i personaggi e le immagini restano dei rispettivi titolari. Il catalogo deve rispettare le politiche di ciascun editore e le leggi applicabili.</div>
+  </section>
+</main>
+<footer><strong>✧ Atlas Mythica ✧</strong>Un atlante delle mitologie nei giochi di carte collezionabili.<br>Progetto indipendente, in evoluzione. Le interpretazioni fantasy non sostituiscono le fonti delle tradizioni originali.</footer>
+<dialog id="detail"><button class="close" id="closeDialog">Chiudi ✕</button><div id="detailContent"></div></dialog>
+<script>
+const entries = [
+ {name:"The Egyptian God Cards",game:"Yu-Gi-Oh!",myth:"Egizia",figure:"Divinità egizie",status:"Riferimento esplicito",glyph:"☼",desc:"Le carte divine egizie prendono il loro immaginario da una tradizione religiosa antica, ma le loro abilità e la loro funzione narrativa appartengono al mondo di Yu-Gi-Oh!.",url:"https://www.yugioh-card.com/en/"},
+ {name:"The Winged Dragon of Ra",game:"Yu-Gi-Oh!",myth:"Egizia",figure:"Ra",status:"Riferimento esplicito",glyph:"𓂀",desc:"Ra è una divinità solare centrale nella religione dell'antico Egitto. La carta è una reinterpretazione fantastica, non una descrizione storica del culto.",url:"https://www.db.yugioh-card.com/yugiohdb/"},
+ {name:"Thassa, Deep-Dwelling",game:"Magic: The Gathering",myth:"Greca",figure:"Poseidone e divinità marine",status:"Ispirazione probabile",glyph:"♆",desc:"Thassa appartiene a Theros, un mondo fantasy di Magic fortemente ispirato alla mitologia greca. Il confronto con Poseidone riguarda soprattutto il dominio sul mare, non un'identità letterale.",url:"https://scryfall.com/search?q=%21%22Thassa%2C+Deep-Dwelling%22"},
+ {name:"Erebos, Bleak-Hearted",game:"Magic: The Gathering",myth:"Greca",figure:"Ade e l'oltretomba",status:"Ispirazione probabile",glyph:"☾",desc:"Erebos è una divinità immaginaria dell'ambientazione di Theros. Il nome richiama Erebo, personificazione dell'oscurità nella tradizione greca; il personaggio del gioco ha una propria caratterizzazione.",url:"https://scryfall.com/search?q=%21%22Erebos%2C+Bleak-Hearted%22"},
+ {name:"Arceus",game:"Pokémon TCG",myth:"Giappone e folklore contemporaneo",figure:"Creatore cosmico (parallelo tematico)",status:"Somiglianza da contestualizzare",glyph:"✧",desc:"Arceus è una creatura del mondo Pokémon associata alla creazione dell'universo. Il confronto con figure creatrici di diverse tradizioni è tematico: non dimostra una derivazione da una singola divinità storica.",url:"https://www.pokemon.com/us/pokemon-tcg"},
+ {name:"Odin",game:"Cardfight!! Vanguard",myth:"Norrena",figure:"Odino",status:"Riferimento da verificare per singola carta",glyph:"ᚠ",desc:"Odino è una figura centrale della mitologia norrena, associata tra l'altro alla sapienza, alla poesia e alla guerra. Per catalogare una carta specifica occorre verificarne nome, edizione e testo.",url:"https://en.cf-vanguard.com/"},
+ {name:"Yggdrasil",game:"Weiss Schwarz",myth:"Norrena",figure:"Yggdrasil, albero cosmico",status:"Confronto da verificare",glyph:"♧",desc:"Yggdrasil è l'albero cosmico nelle fonti norrene. Questa voce è un punto di partenza tematico: va collegata a una carta specifica solo dopo aver verificato il catalogo del gioco.",url:"https://ws-tcg.com/"},
+ {name:"Draghi e serpenti cosmici",game:"Flesh and Blood",myth:"Folklore mondiale",figure:"Draghi e serpenti leggendari",status:"Confronto tematico",glyph:"♜",desc:"Draghi e serpenti cosmici ricorrono in tradizioni molto diverse. Le schede future distingueranno il drago europeo, il long cinese e altre figure senza trattarle come equivalenti.",url:"https://fabtcg.com/"},
+ {name:"Kami e spiriti",game:"Magic: The Gathering",myth:"Giappone",figure:"Kami",status:"Riferimento esplicito nell'ambientazione",glyph:"鳥",desc:"Kamigawa richiama elementi del folklore e delle tradizioni spirituali giapponesi. I kami non sono semplicemente 'mostri': il termine ha significati complessi nel contesto shintoista.",url:"https://scryfall.com/search?q=kamigawa+kami"},
+ {name:"Quetzalcoatl",game:"Yu-Gi-Oh!",myth:"Azteca e mesoamericana",figure:"Serpente piumato",status:"Riferimento da verificare",glyph:"羽",desc:"Il serpente piumato è associato a importanti divinità mesoamericane, tra cui Quetzalcoatl. Le tradizioni azteche, maya e di altri popoli della regione vanno distinte con attenzione.",url:"https://www.db.yugioh-card.com/yugiohdb/"},
+ {name:"Fenrir",game:"Magic: The Gathering",myth:"Norrena",figure:"Fenrir",status:"Riferimento da verificare per carta specifica",glyph:"狼",desc:"Fenrir è il grande lupo della mitologia norrena, legato ai racconti sul Ragnarök. Questa voce illustra il tema; il catalogo dovrà associare solo carte precise e verificabili.",url:"https://scryfall.com/search?q=fenrir"},
+ {name:"Creature del folklore",game:"Pokémon TCG",myth:"Folklore mondiale",figure:"Yōkai, spiriti e animali leggendari",status:"Ispirazione da valutare caso per caso",glyph:"狐",desc:"Molti design Pokémon evocano animali, spiriti o motivi del folklore. Una somiglianza visiva da sola non basta: ogni collegamento richiede fonti e un grado di certezza dichiarato.",url:"https://www.pokemon.com/us/pokemon-tcg"}
+];
+const myths=[
+ ["Greca","♜","Dei olimpici, eroi, titani, mostri e racconti epici."],
+ ["Egizia","☼","Divinità, aldilà, regalità sacra e simbolismo del Nilo."],
+ ["Norrena","ᚠ","Æsir, Vanir, giganti, saghe e cosmologia dei nove mondi."],
+ ["Giapponese","鳥","Kami, yōkai, racconti popolari e tradizioni locali."],
+ ["Celtica","☘","Tradizioni irlandesi, gallesi e continentali da distinguere."],
+ ["Mesopotamica","𒀭","Sumeri, Accadi, Babilonesi e Assiri: miti e testi antichi."],
+ ["Indù","ॐ","Tradizioni plurali, divinità, epopee e testi religiosi."],
+ ["Mesoamericana","羽","Tradizioni maya, mexica/azteche e altri popoli della regione."],
+ ["Cinese","龍","Draghi, immortali, spiriti e cosmologie tradizionali."],
+ ["Folklore mondiale","✧","Creature e racconti popolari da documentare nel loro contesto."]
+];
+const games=[
+ ["Magic: The Gathering","Carte fantasy e mondi ispirati a tradizioni culturali differenti."],
+ ["Yu-Gi-Oh!","Mostri, archetipi, divinità e riferimenti egizi, greci e non solo."],
+ ["Pokémon TCG","Creature immaginarie con possibili richiami ad animali, folklore e leggende."],
+ ["Cardfight!! Vanguard","Unità fantasy, divinità e creature di diversi immaginari."],
+ ["Weiss Schwarz","Carte legate a franchise di anime e altre opere narrative."],
+ ["Flesh and Blood","Eroi, creature e mondo fantasy con identità propria."],
+ ["TCG regionali e di nicchia","Titoli minori, locali, indipendenti o fuori produzione da aggiungere."]
+];
+const catalog=document.getElementById('catalog'),q=document.getElementById('q'),mf=document.getElementById('mythFilter'),gf=document.getElementById('gameFilter');
+function fillFilters(){[...new Set(entries.map(e=>e.myth))].sort().forEach(x=>mf.add(new Option(x,x)));[...new Set(entries.map(e=>e.game))].sort().forEach(x=>gf.add(new Option(x,x)))}
+function render(){let term=q.value.toLowerCase().trim();let filtered=entries.filter(e=>(!term||[e.name,e.game,e.myth,e.figure,e.desc,e.status].join(' ').toLowerCase().includes(term))&&(!mf.value||e.myth===mf.value)&&(!gf.value||e.game===gf.value));catalog.innerHTML='';if(!filtered.length){catalog.innerHTML='<div class="empty">Nessuna scheda trovata. Prova a cambiare la ricerca o i filtri.</div>';return}filtered.forEach(e=>{let el=document.createElement('article');el.className='card';el.innerHTML=`<div class="card-art"><span class="glyph">${e.glyph}</span><small>${e.myth} · Archivio</small></div><div class="card-body"><div class="tags"><span class="tag">${e.game}</span><span class="tag">${e.status}</span></div><h3>${e.name}</h3><p>${e.desc}</p><div class="meta">Figura/tema: ${e.figure}</div><div class="card-actions"><button type="button" data-detail="${entries.indexOf(e)}">Apri scheda</button><a href="${e.url}" target="_blank" rel="noopener noreferrer">Fonte / ricerca ↗</a></div></div>`;catalog.appendChild(el);loadCardImage(e,el.querySelector('.card-art'))})}
+async function loadCardImage(entry, art){
+  // Retrieve card image URLs from public card catalogues where available.
+  try {
+    let imageUrl = null;
+    if(entry.game === 'Magic: The Gathering'){
+      const response = await fetch('https://api.scryfall.com/cards/named?exact='+encodeURIComponent(entry.name), {headers:{'Accept':'application/json'}});
+      if(response.ok){const data=await response.json();imageUrl=data.image_uris?.normal || data.card_faces?.[0]?.image_uris?.normal || null;}
+      // Some archive entries are broad themes rather than exact card names.
+      if(!imageUrl && entry.name === 'Kami e spiriti'){
+        const response2=await fetch('https://api.scryfall.com/cards/search?q=kamigawa+kami&order=name', {headers:{'Accept':'application/json'}});
+        if(response2.ok){const data2=await response2.json();imageUrl=data2.data?.find(c=>c.image_uris)?.image_uris?.normal || null;}
+      }
+    } else if(entry.game === 'Yu-Gi-Oh!'){
+      const exactName = entry.name === 'The Egyptian God Cards' ? 'Slifer the Sky Dragon' : entry.name;
+      const response=await fetch('https://db.ygoprodeck.com/api/v7/cardinfo.php?name='+encodeURIComponent(exactName));
+      if(response.ok){const data=await response.json();imageUrl=data.data?.[0]?.card_images?.[0]?.image_url || null;}
+    } else if(entry.game === 'Pokémon TCG'){
+      const response=await fetch('https://api.pokemontcg.io/v2/cards?q=name:Arceus&pageSize=1');
+      if(response.ok){const data=await response.json();imageUrl=data.data?.[0]?.images?.large || data.data?.[0]?.images?.small || null;}
+    }
+    if(imageUrl){
+      const img=document.createElement('img');img.src=imageUrl;img.alt='Immagine della carta '+entry.name;img.loading='lazy';img.referrerPolicy='no-referrer';
+      img.onload=()=>{art.classList.add('has-image');const glyph=art.querySelector('.glyph');if(glyph)glyph.remove();const small=art.querySelector('small');if(small)small.textContent='Immagine carta · '+entry.game;};
+      img.onerror=()=>{};
+      art.prepend(img);
+    }
+  } catch(err) { /* Keep the decorative fallback if the external catalogue is unavailable. */ }
+}
+function renderMyths(){let box=document.getElementById('mythGrid');myths.forEach(m=>{let el=document.createElement('div');el.className='myth';el.innerHTML=`<span class="symbol">${m[1]}</span><h3>${m[0]}</h3><p>${m[2]}</p><button type="button" data-myth="${m[0]}">Esplora questa tradizione →</button>`;box.appendChild(el)})}
+function renderGames(){let box=document.getElementById('gameGrid');games.forEach((g,i)=>{let el=document.createElement('div');el.className='myth';el.innerHTML=`<span class="symbol">${['✧','☼','♧','ᚠ','❖','♜','⟡'][i]}</span><h3>${g[0]}</h3><p>${g[1]}</p><button type="button" data-game="${g[0]}">Filtra archivio →</button>`;box.appendChild(el)})}
+const dlg=document.getElementById('detail');
+catalog.addEventListener('click',e=>{let b=e.target.closest('[data-detail]');if(!b)return;let x=entries[+b.dataset.detail];document.getElementById('detailContent').innerHTML=`<div class="eyebrow">${x.game} · ${x.myth}</div><h2>${x.name}</h2><p><b>Figura o tema:</b> ${x.figure}</p><p><b>Stato del collegamento:</b> ${x.status}</p><p>${x.desc}</p><p><b>Nota metodologica:</b> questa voce è un punto di partenza e non sostituisce la verifica della carta, dell'edizione e delle fonti storiche. I riferimenti da verificare sono etichettati esplicitamente.</p><p><a href="${x.url}" target="_blank" rel="noopener noreferrer">Apri fonte o ricerca esterna ↗</a></p>`;dlg.showModal()});
+document.getElementById('closeDialog').onclick=()=>dlg.close();
+document.getElementById('reset').onclick=()=>{q.value='';mf.value='';gf.value='';render()};
+[q,mf,gf].forEach(el=>el.addEventListener(el===q?'input':'change',render));
+document.getElementById('mythGrid').addEventListener('click',e=>{let b=e.target.closest('[data-myth]');if(!b)return;mf.value=[...mf.options].some(o=>o.value===b.dataset.myth)?b.dataset.myth:'';q.value='';gf.value='';render();document.getElementById('archivio').scrollIntoView({behavior:'smooth'})});
+document.getElementById('gameGrid').addEventListener('click',e=>{let b=e.target.closest('[data-game]');if(!b)return;gf.value=[...gf.options].some(o=>o.value===b.dataset.game)?b.dataset.game:'';q.value='';mf.value='';render();document.getElementById('archivio').scrollIntoView({behavior:'smooth'})});
+fillFilters();render();renderMyths();renderGames();
+</script>
+</body>
+</html>
